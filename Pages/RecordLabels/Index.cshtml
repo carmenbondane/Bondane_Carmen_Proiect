@@ -1,0 +1,40 @@
+﻿@page
+@model Bondane_Carmen_Proiect.Pages.RecordLabels.IndexModel
+
+@{
+    ViewData["Title"] = "Record Labels";
+}
+<style>
+    h1 {
+        color: cornflowerblue;
+    }
+</style>
+<h1>Record Labels</h1>
+
+<p>
+    <a asp-page="Create">Add a new Record Label</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RecordLabel[0].RLName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.RecordLabel) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RLName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
