@@ -4,9 +4,11 @@
 @{
     ViewData["Title"] = "Genres";
 }
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <style>
     h1 {
-        color: darkorchid;
+        color: cornflowerblue;
+        font-family: 'Berlin Sans FB';
     }
 </style>
 <h1>Genres</h1>
@@ -30,9 +32,9 @@
                 @Html.DisplayFor(modelItem => item.GenreName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID"><i class='fas fa-edit' style='font-size:20px;color:cornflowerblue'></i></a> |
+                <a asp-page="./Details" asp-route-id="@item.ID"><i class='far fa-clipboard' style='font-size:20px;color:cornflowerblue'></i></a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID"><i class='fas fa-trash' style='font-size:20px;color:cornflowerblue'></i></a>
             </td>
         </tr>
 }

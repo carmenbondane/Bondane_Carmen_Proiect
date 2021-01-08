@@ -1,10 +1,16 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Music Land";
 }
-
+<style>
+    hi {
+        color: cornflowerblue;
+    }
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <img src="~/css/5b5093798723ee88cd6720f2_musicland logo-01.png" height="300" width="500"/>
+    <h1 class="display-4" style=" font-family: 'Berlin Sans FB'">Welcome to Music Land!</h1>
+    <p style="font-family: 'Berlin Sans FB'">Do you want to browse through the available albums on our site? </p>
+    <p><a asp-page="/Albums/Index">Click here!</a></p>
 </div>
